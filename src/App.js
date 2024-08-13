@@ -23,31 +23,44 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Calculadora</h1>
-      <div className="calculator">
-        <div className="display">
-          <input type="text" value={input} readOnly />
-          <div className="result">{result}</div>
-        </div>
-        <div className="keypad">
-          <button onClick={() => handleClick("1")}>1</button>
-          <button onClick={() => handleClick("2")}>2</button>
-          <button onClick={() => handleClick("3")}>3</button>
-          <button onClick={() => handleClick("+")}>+</button>
-          <button onClick={() => handleClick("4")}>4</button>
-          <button onClick={() => handleClick("5")}>5</button>
-          <button onClick={() => handleClick("6")}>6</button>
-          <button onClick={() => handleClick("-")}>-</button>
-          <button onClick={() => handleClick("7")}>7</button>
-          <button onClick={() => handleClick("8")}>8</button>
-          <button onClick={() => handleClick("9")}>9</button>
-          <button onClick={() => handleClick("*")}>*</button>
-          <button onClick={() => handleClick("0")}>0</button>
-          <button onClick={() => handleClick(".")}>.</button>
-          <button onClick={clear}>C</button>
-          <button onClick={() => handleClick("/")}>/</button>
-          <button onClick={calculate}>=</button>
+    <div className="container">
+      <h1 className="center-align">Calculadora</h1>
+      <div className="card calculator">
+        <div className="card-content">
+          <div className="display">
+            <input type="text" value={input} readOnly className="display-operations"/>
+            <input type="text" value={result} readOnly className="display-result"/>
+          </div>
+          <div className="keypad">
+            <div className="row">
+              <button className="col s3 btn" onClick={() => handleClick("+")}>+</button>
+              <button className="col s3 btn" onClick={() => handleClick("1")}>1</button>
+              <button className="col s3 btn" onClick={() => handleClick("2")}>2</button>
+              <button className="col s3 btn" onClick={() => handleClick("3")}>3</button>
+            </div>
+            <div className="row">
+              <button className="col s3 btn" onClick={() => handleClick("-")}>-</button>
+              <button className="col s3 btn" onClick={() => handleClick("4")}>4</button>
+              <button className="col s3 btn" onClick={() => handleClick("5")}>5</button>
+              <button className="col s3 btn" onClick={() => handleClick("6")}>6</button>
+            </div>
+            <div className="row">
+              <button className="col s3 btn" onClick={() => handleClick("*")}>*</button>
+              <button className="col s3 btn" onClick={() => handleClick("7")}>7</button>
+              <button className="col s3 btn" onClick={() => handleClick("8")}>8</button>
+              <button className="col s3 btn" onClick={() => handleClick("9")}>9</button>
+            </div>
+            <div className="row">
+              <button className="col s3 btn" onClick={clear}>C</button>
+              <button className="col s3 btn" onClick={() => handleClick("/")}>/</button>
+              <button className="col s3 btn" onClick={() => handleClick(".")}>.</button>
+              <button className="col s3 btn" onClick={() => handleClick("0")}>0</button>
+              
+            </div>
+            <div className="row">
+              <button className="col s12 btn" onClick={calculate}>=</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
