@@ -51,8 +51,8 @@ function App() {
               <button className="col s3 btn" onClick={() => handleClick("9")}>9</button>
             </div>
             <div className="row">
-              <button className="col s3 btn" onClick={clear}>C</button>
               <button className="col s3 btn" onClick={() => handleClick("/")}>/</button>
+              <button className="col s3 btn" onClick={clear}>C</button>
               <button className="col s3 btn" onClick={() => handleClick(".")}>.</button>
               <button className="col s3 btn" onClick={() => handleClick("0")}>0</button>
               

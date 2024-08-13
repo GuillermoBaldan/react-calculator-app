@@ -39,9 +39,8 @@ h1 {
   box-sizing: border-box;
 }
 
-/* .btn {
-  margin-top: 10px;
-  margin-left: 10px; 
-  margin-right: 10px; 
-  margin-bottom: 10px;
-} */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
